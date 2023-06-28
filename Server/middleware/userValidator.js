@@ -5,7 +5,7 @@ async function userValidator(req,res,next){
         res.send({
             message:"User already exist"
         })
-    }else{
+    }else{    
         next()
     }
 
