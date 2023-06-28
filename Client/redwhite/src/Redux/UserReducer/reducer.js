@@ -16,7 +16,7 @@ export const reducer =(state=initstate , {type,payload})=> {
         case REGISTER_SUCCESS : return {...state , loading:false, message:payload}
         case REGISTER_FAILED : return {...state , loading:false , error:true}
         case LOGIN_REQUEST : return {...state , loading:true}
-        case LOGIN_SUCCESS: return {...state , loading:false, auth:true, message:payload.message, role:payload.role, username:payload.username , token:payload.token}
+        case LOGIN_SUCCESS: return {...state , loading:false, auth:payload.role=="admin" ? true : false, message:payload.message, role:payload.role, username:payload.username , token:payload.token}
         case LOGIN_FAILED: return {...state , loading:false , error:true}
         default: return state
     }

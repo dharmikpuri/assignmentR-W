@@ -19,12 +19,12 @@ const Product = () => {
 
   return (
     
-    <div style={{display:"grid", gridTemplateColumns:"repeat(2,1fr)", alignItems:"center"}}>
+    <div style={{display:"grid", gridTemplateColumns:"repeat(2,1fr)", justifyContent:"center", }}>
         {data.map((el)=>{
           // <h1>Hello Product Page</h1>
           // console.log(el)
         return  <div>
-          <img src={el.image} alt="img" width={"300px"} style={{alignItems:"center"}}/>
+          <img src={el.image} alt="img" width={"300px"} style={{alignItems:"center",margin:"auto"}}/>
           <h1>{el.title}</h1>
           <h2>{el.category}</h2>
           <h2>{el.price}</h2>
